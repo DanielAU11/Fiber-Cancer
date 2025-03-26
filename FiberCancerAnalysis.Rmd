@@ -1,0 +1,15 @@
+---
+title: "FiberCancerAnalysis"
+output: html_document
+---
+Determine whether there is a correlation between dietary fiber intake and the incidence of colon cancer in a population.
+
+```{r}
+library(nutriR)
+```
+
+```{r}
+dists_usa_fiber <- get_dists(nutrients = "Fiber", isos = "USA", sexes = "MF", ages=18:75 )
+plot_dists(dists_usa_fiber)
+```
+
